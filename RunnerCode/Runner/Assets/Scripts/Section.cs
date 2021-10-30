@@ -6,12 +6,4 @@ public class Section : MonoBehaviour
 {
     public Transform Begin;
     public Transform End;
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
 }

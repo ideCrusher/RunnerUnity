@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterMovment.cs" />
+     <Compile Include="Assets\Scripts\ScriptForMenu.cs" />
      <Compile Include="Assets\Scripts\Section.cs" />
      <Compile Include="Assets\Scripts\SpawnSections.cs" />
      <Compile Include="Assets\Scripts\Trap.cs" />

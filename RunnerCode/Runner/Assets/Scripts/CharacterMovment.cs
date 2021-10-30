@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.GameCenter;
 using UnityEngine.UI;
 
 public class CharacterMovment : MonoBehaviour
@@ -17,7 +12,6 @@ public class CharacterMovment : MonoBehaviour
         _RB = GetComponent<Rigidbody2D>();
         _startPosition = transform.position;
     }
-
     void Update()
     {        
         _RB.velocity = new Vector2(1 * 250 * Time.fixedDeltaTime, _RB.velocity.y); 
@@ -31,10 +25,9 @@ public class CharacterMovment : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Traps"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
-
     void Score()
     {
         float Start = 0;
@@ -43,7 +36,6 @@ public class CharacterMovment : MonoBehaviour
             Start = (transform.position.x - Start);
             Start = (int) Start;
         }
-        
-        ScoreText.text = Start.ToString("0.");
+        ScoreText.text = Start.ToString();
     }
 }

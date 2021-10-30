@@ -13,20 +13,15 @@ public class SpawnSections : MonoBehaviour
     private List<Section> _spawnSectors = new List<Section>();
     void Start()
     {
-        
         _spawnSectors.Add(FirstSection);
-
         _spawnTraps.Add(FirstTrap);
-
         SpawnTraps();
     }
-
     void Update()
     {
         if (Player.position.x > _spawnSectors[_spawnSectors.Count - 1].End.position.x - 15f)
         { 
             SpawnSection(); 
-            
         }        
         if(Player.position.x > _spawnTraps[4].transform.position.x)
         {
@@ -48,7 +43,6 @@ public class SpawnSections : MonoBehaviour
             _spawnSectors.RemoveAt(0);
         }
     }
-
     void SpawnTraps()
     {
         for(int i = _spawnTraps.Count - 1; i< 9; i++)
