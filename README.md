@@ -9,6 +9,7 @@ Use your abilities, run away from the enemy and run!
 Control:
 
 Flying - space or tach in the tachpad.
+
 ESC - Pause.
 
 
