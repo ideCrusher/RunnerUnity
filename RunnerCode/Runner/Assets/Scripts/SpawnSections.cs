@@ -15,6 +15,7 @@ public class SpawnSections : MonoBehaviour
     {
         _spawnSectors.Add(FirstSection);
         _spawnTraps.Add(FirstTrap);
+
         SpawnTraps();
     }
     void Update()
@@ -50,7 +51,7 @@ public class SpawnSections : MonoBehaviour
         Trap newTrap = Instantiate(TrapPrefab[Random.Range(0,TrapPrefab.Length)]);
         Vector3 trapPX = new Vector3();
         trapPX.x = _spawnTraps[_spawnTraps.Count - 1].transform.position.x + Random.Range(10, 20);
-        trapPX.y = Random.Range(-1.35f, 1.35f);       
+        trapPX.y = Random.Range(-1.3f, 1.3f);       
         newTrap.transform.position = trapPX;
         _spawnTraps.Add(newTrap);
         }     
