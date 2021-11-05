@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnSections : MonoBehaviour
 {
-    public Transform Player;
+    private Transform _Player;
     public Section[] SectioPref;
     public Section FirstSection;
     public Trap[] TrapPrefab; 
@@ -14,21 +14,21 @@ public class SpawnSections : MonoBehaviour
     void Start()
     {
         _spawnSectors.Add(FirstSection);
-        _spawnTraps.Add(FirstTrap);
-
+        _spawnTraps.Add(FirstTrap);    
         SpawnTraps();
     }
     void Update()
     {
-        if (Player.position.x > _spawnSectors[_spawnSectors.Count - 1].End.position.x - 15f)
+        _Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        if (_Player.position.x > _spawnSectors[_spawnSectors.Count - 1].End.position.x - 15f)
         { 
             SpawnSection(); 
         }        
-        if(Player.position.x > _spawnTraps[4].transform.position.x)
+        if(_Player.position.x > _spawnTraps[6].transform.position.x)
         {
             SpawnTraps();
         }
-        if(Player.position.x > _spawnTraps[6].transform.position.x)
+        if(_Player.position.x > _spawnTraps[9].transform.position.x)
         {      
             TrapDestroyr();
         }
@@ -46,7 +46,7 @@ public class SpawnSections : MonoBehaviour
     }
     void SpawnTraps()
     {
-        for(int i = _spawnTraps.Count - 1; i< 9; i++)
+        for(int i = _spawnTraps.Count - 1; i< 12; i++)
         {        
         Trap newTrap = Instantiate(TrapPrefab[Random.Range(0,TrapPrefab.Length)]);
         Vector3 trapPX = new Vector3();
@@ -58,7 +58,7 @@ public class SpawnSections : MonoBehaviour
     }
     void TrapDestroyr()
     {
-            for(int i = _spawnTraps.Count - 1; i > 6; i--)
+            for(int i = _spawnTraps.Count - 1; i > 9; i--)
             {
             Destroy(_spawnTraps[0].gameObject);
             _spawnTraps.RemoveAt(0);

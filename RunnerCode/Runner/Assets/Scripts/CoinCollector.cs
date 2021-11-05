@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class CoinCollector : MonoBehaviour
 {
-    public Transform Player;
+    private Transform _Player;
     public CoinScript[] CoinPrefs;
     public CoinScript FirstCoin;
     private List<CoinScript> _CoinSpawn = new List<CoinScript>();
     void Start()
     {
         _CoinSpawn.Add(FirstCoin);
+        _Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
 
     void Update()
     {
-        if (Player.position.x > _CoinSpawn[_CoinSpawn.Count - 1].transform.position.x - 30f)
+        if (_Player.position.x > _CoinSpawn[_CoinSpawn.Count - 1].transform.position.x - 30f)
         {
             CoinSpawner();
             CoinDestroyer();
@@ -25,7 +26,7 @@ public class CoinCollector : MonoBehaviour
 
     void CoinSpawner()
     {
-        for(int i = _CoinSpawn.Count - 1; i< 9; i++)
+        for(int i = _CoinSpawn.Count - 1; i< 12; i++)
         {        
         CoinScript newCoin = Instantiate(CoinPrefs[Random.Range(0,CoinPrefs.Length)]);
         Vector3 trapPX = new Vector3();
@@ -37,7 +38,7 @@ public class CoinCollector : MonoBehaviour
     }
     void CoinDestroyer()
     {
-        for(int i = _CoinSpawn.Count - 1; i > 6; i--)
+        for(int i = _CoinSpawn.Count - 1; i > 9; i--)
             {
                 Destroy(_CoinSpawn[0].gameObject);
                 _CoinSpawn.RemoveAt(0);
