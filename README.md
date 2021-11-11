@@ -1,4 +1,5 @@
 # RunnerUnity
+#Platform - Windows
 
 Hi! It's runner man!
 
@@ -16,3 +17,5 @@ ESC - Pause.
 
 
 The project is a prototype and is far from complete.
+
+
