@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\BuyAndSet.cs" />
      <Compile Include="Assets\Menu\MenuStore.cs" />
      <Compile Include="Assets\Scripts\CharacterMovment.cs" />
      <Compile Include="Assets\Scripts\CoinCollector.cs" />
@@ -43,7 +44,7 @@
      <Compile Include="Assets\Scripts\MainCameraMenu.cs" />
      <Compile Include="Assets\Scripts\ScriptForMenu.cs" />
      <Compile Include="Assets\Scripts\Section.cs" />
-     <Compile Include="Assets\Scripts\SkinMenu.cs" />
+     <Compile Include="Assets\Scripts\SkinList.cs" />
      <Compile Include="Assets\Scripts\SpawnSections.cs" />
      <Compile Include="Assets\Scripts\Trap.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

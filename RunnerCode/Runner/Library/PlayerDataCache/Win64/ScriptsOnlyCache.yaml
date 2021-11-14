@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BuyAndSet
     - CharacterMovment
     - CoinCollector
     - CoinScript
@@ -8,7 +9,7 @@ ScriptsOnlyBuild:
     - MenuStore
     - ScriptForMenu
     - Section
-    - SkinMenu
+    - SkinList
     - SpawnSections
     - Trap
     Cinemachine.dll:
@@ -17,6 +18,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -99,21 +102,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13210}
     - Class: 114
-      Script: {instanceID: 13606}
+      Script: {instanceID: 13608}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 14092}
     - Class: 114
-      Script: {instanceID: 14530}
+      Script: {instanceID: 14532}
     - Class: 114
-      Script: {instanceID: 14664}
+      Script: {instanceID: 14666}
     - Class: 114
-      Script: {instanceID: 14928}
+      Script: {instanceID: 14930}
     - Class: 114
-      Script: {instanceID: 15404}
+      Script: {instanceID: 15406}
     - Class: 114
-      Script: {instanceID: 15464}
+      Script: {instanceID: 15466}
     - Class: 114
-      Script: {instanceID: 15472}
+      Script: {instanceID: 15474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -147,7 +150,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -155,6 +170,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11358}
     - Class: 114
       Script: {instanceID: 11390}
+    - Class: 114
+      Script: {instanceID: 11498}
     - Class: 114
       Script: {instanceID: 11754}
     - Class: 114
@@ -164,25 +181,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12724}
     - Class: 114
-      Script: {instanceID: 13606}
+      Script: {instanceID: 13400}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 13608}
     - Class: 114
-      Script: {instanceID: 14116}
+      Script: {instanceID: 14092}
     - Class: 114
-      Script: {instanceID: 14530}
+      Script: {instanceID: 14118}
     - Class: 114
-      Script: {instanceID: 14664}
+      Script: {instanceID: 14532}
     - Class: 114
-      Script: {instanceID: 15032}
+      Script: {instanceID: 14666}
     - Class: 114
-      Script: {instanceID: 15246}
+      Script: {instanceID: 14930}
     - Class: 114
-      Script: {instanceID: 15342}
+      Script: {instanceID: 15034}
     - Class: 114
-      Script: {instanceID: 15380}
+      Script: {instanceID: 15248}
     - Class: 114
-      Script: {instanceID: 15464}
+      Script: {instanceID: 15344}
+    - Class: 114
+      Script: {instanceID: 15382}
+    - Class: 114
+      Script: {instanceID: 15466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -190,6 +211,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -364,7 +387,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 9f54e90afea28775ebea5ef289593867
+      Hash: e9a113cf5af6cb45dab3b970b4462126
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScriptForMenu
@@ -674,6 +697,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePipeline
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BuyAndSet
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1132,10 +1161,10 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 128610a8f6e679193a78413bea5f1875
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SkinMenu
+    className: SkinList
   - hash:
       serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
@@ -1144,7 +1173,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: d7dd96bea11585aab34b3650a09670c9
+      Hash: 1b146979b4c4e49132ee987cef77a1a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuStore
@@ -1242,4 +1271,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MenuScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Project/Games/RunnersV5part1/Runner.exe
+  playerPath: C:/Project/Games/RunnersV5part3/Runner.exe
