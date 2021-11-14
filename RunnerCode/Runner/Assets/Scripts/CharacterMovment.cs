@@ -19,7 +19,7 @@ public class CharacterMovment : MonoBehaviour
         _coef = (int)(_Start/10/5);
         InvokeRepeating("Score",0.3f,0.3f);
         _ScoreText = GameObject.Find("ScoreText").GetComponent<Text>();
-        _CoinText = GameObject.Find("CoinScore").GetComponent<Text>();
+        _CoinText = GameObject.Find("CoinText").GetComponent<Text>();
     }
     void Update()
     {        
@@ -36,7 +36,6 @@ public class CharacterMovment : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Traps"))
         {
-            Saves();
             SceneManager.LoadScene(1);
         }
     }
@@ -53,17 +52,6 @@ public class CharacterMovment : MonoBehaviour
     {      
         _Start+=1;
         _ScoreText.text = _Start.ToString();
-    }
-
-    void Saves()
-    {
-         if(Convert.ToInt32(_ScoreText.text) > PlayerPrefs.GetInt("BestScore"))
-            {
-                PlayerPrefs.SetInt("BestScore", Convert.ToInt32(_ScoreText.text));
-            }
-            int Coin = PlayerPrefs.GetInt("CoinsScore");
-            Coin = Coin + Convert.ToInt32(_CoinText.text);
-            PlayerPrefs.SetInt("CoinsScore",Coin);   
     }
     
 }

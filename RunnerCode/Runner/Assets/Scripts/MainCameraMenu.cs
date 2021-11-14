@@ -8,13 +8,13 @@ public class MainCameraMenu : MonoBehaviour
     private Transform _PlayerPos;
     public CharacterMovment[] characterPrefab;
     private Vector3 _startPosition = new Vector3(-7.6f,0f,-10f);
-    private string _Skin;
+    private int _Skin;
 
     void Start()
     {
-        _Skin = PlayerPrefs.GetString("Skin");
-        GameObject spawn = Instantiate(Resources.Load($"Prefab/{_Skin}")) as GameObject;
-        
+        //Creating character
+        _Skin = PlayerPrefs.GetInt("Skin");
+        CharacterMovment spawn = Instantiate(characterPrefab[0]);
         spawn.transform.position = _startPosition;
 
         _PlayerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();  

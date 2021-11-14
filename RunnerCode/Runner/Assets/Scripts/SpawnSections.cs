@@ -64,7 +64,4 @@ public class SpawnSections : MonoBehaviour
             _spawnTraps.RemoveAt(0);
             } 
     }
-
-
-    
 }
