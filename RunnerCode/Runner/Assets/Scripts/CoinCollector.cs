@@ -13,8 +13,6 @@ public class CoinCollector : MonoBehaviour
         _CoinSpawn.Add(FirstCoin);
         _Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
-
-
     void Update()
     {
         if (_Player.position.x > _CoinSpawn[_CoinSpawn.Count - 1].transform.position.x - 30f)
@@ -23,7 +21,6 @@ public class CoinCollector : MonoBehaviour
             CoinDestroyer();
         }
     }
-
     void CoinSpawner()
     {
         for(int i = _CoinSpawn.Count - 1; i< 12; i++)
@@ -43,6 +40,5 @@ public class CoinCollector : MonoBehaviour
                 Destroy(_CoinSpawn[0].gameObject);
                 _CoinSpawn.RemoveAt(0);
             } 
-    }
-    
+    } 
 }
