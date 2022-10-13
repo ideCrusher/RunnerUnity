@@ -18,4 +18,4 @@ ESC - Pause.
 
 The project is a prototype and is far from complete.
 
-
+EXE FILE INSIDE RAR FILE
