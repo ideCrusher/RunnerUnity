@@ -19,3 +19,5 @@ ESC - Pause.
 The project is a prototype and is far from complete.
 
 EXE FILE INSIDE RAR FILE
+
+(Yes! This game have bug skill "Dash")
