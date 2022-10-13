@@ -26,16 +26,16 @@ EXE FILE INSIDE RAR FILE
 
 <h3>Main menu</h3>
 
-![alt text](Screenshots/MainMenu.jpg "MainMenu.jpg")
+![alt text](Screenshots/MainMenu.jpg "MainMenu")
 
 <h3>Skin store</h3>
 
-![alt text](Screenshots/MenuSkinStore.jpg "MenuSkinStore.jpg")
+![alt text](Screenshots/MenuSkinStore.jpg "MenuSkinStore")
 
 <h3>Gameplay 1</h3>
 
-![alt text](Screenshots/Gameplay1.jpg "Gameplay1.jpg")
+![alt text](Screenshots/Gameplay1.jpg "Gameplay1")
 
 <h3>Gameplay 2</h3>
 
-![alt text](Screenshots/Gameplay2.jpg "Gameplay2.jpg")
+![alt text](Screenshots/Gameplay2.jpg "Gameplay2")
